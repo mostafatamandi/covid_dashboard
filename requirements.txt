@@ -2,6 +2,15 @@ dash
 dash-bootstrap-components
 pandas
 numpy
+matplotlib
 scikit-learn
 plotly
 xgboost
+streamlit
+pickle
+scipy
+requests
+datetime
+io
+base64
+
