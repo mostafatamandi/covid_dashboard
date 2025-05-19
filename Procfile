@@ -1,1 +1,1 @@
-web: python covid_dash.py
+web: gunicorn covid_dash:app
