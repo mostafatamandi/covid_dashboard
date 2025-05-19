@@ -338,7 +338,6 @@ def create_dynamic_input_form(top_features):
 
 # ایجاد برنامه Dash با تم FLATLY
 app = Dash(__name__, external_stylesheets=[dbc.themes.FLATLY])
-app.server
 # لایه‌های داشبورد
 app.layout = html.Div([
     # هدر داشبورد
@@ -837,3 +836,8 @@ def make_prediction(n_clicks, values, input_ids, top_features):
     except Exception as e:
         print(f"خطا در پیش‌بینی: {str(e)}")
         return dbc.Alert(f"خطا در پیش‌بینی: {str(e)}", color="warning", className="text-center")
+import os
+if name == '__main__':
+    if os.environ.get('ENV') != 'production':
+        port = int(os.environ.get('PORT', 8050))
+        app.run(host='0.0.0.0', port=port, debug=True)
