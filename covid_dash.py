@@ -339,6 +339,7 @@ def create_dynamic_input_form(top_features):
 
 # ایجاد برنامه Dash با تم FLATLY
 app = Dash(__name__, external_stylesheets=[dbc.themes.FLATLY])
+server = app.server 
 # لایه‌های داشبورد
 app.layout = html.Div([
     # هدر داشبورد
