@@ -836,3 +836,6 @@ def make_prediction(n_clicks, values, input_ids, top_features):
     except Exception as e:
         print(f"خطا در پیش‌بینی: {str(e)}")
         return dbc.Alert(f"خطا در پیش‌بینی: {str(e)}", color="warning", className="text-center")
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=8000, debug=False)       
+        
